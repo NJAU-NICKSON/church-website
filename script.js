@@ -1,12 +1,8 @@
-/*============================================================
-  BELIEVERS' SANCTUARY THIKA - Shared Site Script
-  Navigation · Scroll Animations · Utilities
-============================================================*/
 'use strict';
 
 (function () {
 
-  /* ── NAVIGATION ─────────────────────────────────────── */
+  /*NAVIGATION*/
   const navbar    = document.getElementById('navbar');
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobileNav');
@@ -56,12 +52,12 @@
     }
   });
 
-  /* ── SCROLL ANIMATIONS ───────────────────────────────── */
+  /*SCROLL ANIMATIONS*/
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.classList.add('visible');
-        // Don't unobserve stagger parents so children all animate in
+        
         if (!e.target.classList.contains('stagger')) io.unobserve(e.target);
       }
     });
@@ -69,7 +65,7 @@
 
   document.querySelectorAll('.reveal, .stagger').forEach(el => io.observe(el));
 
-  /* ── COUNTER ANIMATION ───────────────────────────────── */
+  /*COUNTER ANIMATION*/
   const counters = document.querySelectorAll('.stat-num[data-count]');
   if (counters.length) {
     const cio = new IntersectionObserver((entries) => {
@@ -96,7 +92,7 @@
 
   function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
 
-  /* ── NOTIFICATION SYSTEM ─────────────────────────────── */
+  /* NOTIFICATION SYSTEM  */
   function showNotification(msg, type = 'info') {
     document.querySelector('.bst-notification')?.remove();
     const el = document.createElement('div');
@@ -124,7 +120,7 @@
   // Expose globally
   window.BST = { showNotification };
 
-  /* ── CONTACT FORM ────────────────────────────────────── */
+  /*CONTACT FORM */
   const form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', e => {
@@ -141,7 +137,7 @@
     });
   }
 
-  /* ── PRAYER FORM ─────────────────────────────────────── */
+  /*PRAYER FORM*/
   const prayerForm = document.getElementById('prayerForm');
   if (prayerForm) {
     prayerForm.addEventListener('submit', e => {
@@ -158,7 +154,7 @@
     });
   }
 
-  /* ── SMOOTH SCROLL (in-page anchors) ────────────────── */
+  /* SMOOTH SCROLL (in-page anchors)*/
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function (e) {
       const id = this.getAttribute('href').slice(1);
@@ -170,7 +166,7 @@
     });
   });
 
-  /* ── PERFORMANCE ─────────────────────────────────────── */
+  /*PERFORMANCE */
   window.addEventListener('load', () => {
     if (window.performance?.timing) {
       const t = window.performance.timing;
@@ -179,7 +175,7 @@
     }
   });
 
-  /* ── EASTER EGG ──────────────────────────────────────── */
+  /*EASTER EGG */
   let seq = [];
   const code = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
   document.addEventListener('keydown', e => {
