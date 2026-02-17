@@ -1,0 +1,35 @@
+/* SUNDAY SERVICE */
+.service-overview-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(36px,5.5vw,80px);align-items:start}
+.service-card{background:var(--fog);border-radius:7px;padding:28px;border:1px solid var(--border)}
+.service-card-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:20px;display:block}
+.service-detail-list{display:flex;flex-direction:column}
+.service-detail-row{display:flex;flex-direction:column;gap:2px;padding:12px 0;border-bottom:1px solid var(--border)}
+.service-detail-row:last-child{border-bottom:none;padding-bottom:0}
+.service-detail-row strong{font-family:var(--mono);font-size:.6rem;font-weight:700;color:var(--gold-hi);text-transform:uppercase;letter-spacing:.07em}
+.service-detail-row span{font-size:.88rem;color:var(--ink)}
+
+/* Order of service */
+.order-section{background:var(--fog)}
+.order-timeline{max-width:680px;margin:40px auto 0}
+.order-item{display:grid;grid-template-columns:72px 28px 1fr;align-items:start}
+.order-time{font-family:var(--mono);font-size:.63rem;color:var(--gold-hi);letter-spacing:.05em;text-align:right;padding-right:14px;padding-top:2px}
+.order-connector{display:flex;flex-direction:column;align-items:center}
+.order-dot{width:9px;height:9px;background:var(--gold-hi);border-radius:50%;flex-shrink:0;margin-top:2px}
+.order-line{width:1px;flex:1;background:linear-gradient(to bottom,var(--gold-hi),rgba(200,151,58,.12));min-height:44px}
+.order-content{padding:0 0 32px 14px}
+.order-content h4{margin-bottom:5px;font-size:.93rem}
+.order-content p{font-size:.86rem;margin:0}
+.order-theme-pill{display:inline-flex;margin-top:9px;padding:3px 11px;background:var(--ink);color:var(--gold-hi);font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;border-radius:3px}
+
+/* Gatherings */
+.gatherings-section{background:var(--white)}
+.gatherings-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.gathering-card{padding:22px 18px}
+.gathering-day{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:7px}
+.gathering-card h4{font-size:.88rem;margin-bottom:3px}
+.gathering-time{font-family:var(--serif);font-size:1rem;color:var(--ink);margin-bottom:9px}
+.gathering-card p{font-size:.83rem;margin-bottom:9px}
+.gathering-location{font-size:.72rem;color:var(--muted);font-family:var(--mono)}
+
+@media(max-width:1024px){.service-overview-grid{grid-template-columns:1fr}.gatherings-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.gatherings-grid{grid-template-columns:1fr}.order-item{grid-template-columns:58px 22px 1fr}}

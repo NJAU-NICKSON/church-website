@@ -1,0 +1,45 @@
+/* GIVE */
+.give-intro-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(36px,5.5vw,88px);align-items:start}
+.give-verse{background:var(--fog);border-radius:6px;padding:22px 26px;border-left:2px solid var(--gold-hi);margin-top:24px}
+.give-verse blockquote p{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--ink);margin-bottom:8px;line-height:1.55}
+.give-verse blockquote cite{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;color:var(--gold-hi);text-transform:uppercase}
+
+.give-intro-stats{display:flex;flex-direction:column;gap:12px}
+.give-stat{display:flex;flex-direction:column;gap:3px;padding:16px 18px;background:var(--fog);border-radius:6px;border:1px solid var(--border);border-left:2px solid var(--gold-hi)}
+.give-stat strong{font-size:.88rem;color:var(--ink)}
+.give-stat span{font-size:.81rem;color:var(--muted);line-height:1.45}
+
+/* Payment */
+.payment-section{background:var(--ink)}
+.payment-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+.payment-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:28px;position:relative}
+.payment-card--gold{border-color:rgba(200,151,58,.35);background:rgba(200,151,58,.05)}
+.payment-card-badge{position:absolute;top:-11px;right:20px;background:var(--gold-hi);color:var(--white);font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px}
+.payment-card-purpose{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:5px}
+.payment-card-bank{font-family:var(--serif);font-size:1.45rem;color:var(--white);font-weight:400;margin-bottom:22px;line-height:1.15}
+
+.payment-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.payment-step{display:flex;gap:11px;align-items:center;font-size:.85rem;color:rgba(255,255,255,.68)}
+.step-num{width:22px;height:22px;border:1px solid rgba(200,151,58,.38);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.62rem;color:var(--gold-hi);flex-shrink:0}
+.payment-step strong{color:var(--white)}
+.copy-num{cursor:pointer;background:rgba(200,151,58,.14);padding:2px 7px;border-radius:3px;color:var(--gold-hi)!important;transition:background .18s}
+.copy-num:hover{background:rgba(200,151,58,.28)}
+.payment-card-note{font-size:.75rem;color:rgba(255,255,255,.36);font-family:var(--mono);letter-spacing:.04em;padding-top:14px;border-top:1px solid rgba(255,255,255,.07)}
+
+.quick-ref{margin-top:44px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:7px;padding:24px 28px}
+.quick-ref-title{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:16px}
+.quick-ref-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.quick-ref-label{display:block;font-family:var(--mono);font-size:.66rem;color:rgba(255,255,255,.44);letter-spacing:.08em;margin-bottom:6px}
+.quick-ref-nums{display:flex;gap:20px;flex-wrap:wrap}
+.quick-ref-nums span{font-size:.86rem;color:rgba(255,255,255,.58)}
+.quick-ref-nums strong{color:var(--white)}
+
+/* Giving types */
+.giving-types-section{background:var(--fog)}
+.giving-types{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.giving-type-card{padding:26px 20px}
+.giving-type-card h4{margin-bottom:8px;font-size:.92rem}
+.giving-type-card p{font-size:.85rem;margin:0}
+
+@media(max-width:1024px){.give-intro-grid{grid-template-columns:1fr}.payment-cards{grid-template-columns:1fr}.quick-ref-grid{grid-template-columns:1fr}.giving-types{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.giving-types{grid-template-columns:1fr}}
